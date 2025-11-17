@@ -43,30 +43,32 @@ export default function DashboardPage() {
 
         <div className="mt-2 flex items-center justify-between w-full">
           <div className="flex flex-col">
-          <p className="text-[14px] text-gray-700">Good morning,</p>
-          <h2 className="text-[20px] font-semibold text-gray-900">
-            {PATIENTS[0].name}
-          </h2>
-        </div>
-         <div
-      className="
+            <p className="text-[14px] text-gray-700">Good morning,</p>
+            <h2 className="text-[20px] font-semibold text-gray-900">
+              {PATIENTS[0].name}
+            </h2>
+          </div>
+          <div
+            className="
         w-[86.74px] h-[32px]
         rounded-[10px]
         flex items-center justify-center
         gap-[16px]
       "
-    >
-      <Image
-        src={PATIENTS[0].image}
-        alt="Patient Profile"
-        width={32}
-        height={32}
-        className="rounded-[25px]"
-      />
-    </div>
-    </div>
-  <div className="mt-4 flex flex-row items-center gap-[10px]">
-        <div className="w-[290px] h-[40px]
+          >
+            <div className="relative w-12 h-12 rounded-full overflow-hidden">
+              <Image
+                src="/doc_img.JPG"
+                alt="Patient Profile"
+                fill
+                className="object-cover"
+                sizes="48px"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 flex flex-row items-center gap-[10px]">
+          <div className="w-[290px] h-[40px]
         bg-white/80
         border border-black/10
         rounded-[10px]
@@ -74,16 +76,16 @@ export default function DashboardPage() {
         px-[16px] py-[11px]
         gap-[10px]
       ">
-          <input
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search Psychologists..."
-            className="flex-1 bg-transparent outline-none text-gray-800 placeholder-gray-600"
-          />
-          <FiSearch className="text-gray-700 text-xl" />
-        </div>
-        <div
-      className="
+            <input
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search Psychologists..."
+              className="flex-1 bg-transparent outline-none text-gray-800 placeholder-gray-600"
+            />
+            <FiSearch className="text-gray-700 text-xl" />
+          </div>
+          <div
+            className="
         w-[42px] h-[42px]
         flex items-center justify-center
         bg-white/80
@@ -91,11 +93,11 @@ export default function DashboardPage() {
         rounded-[10px]
         px-[16px] py-[11px]
       "
-    >
-      <FiFilter className="text-gray-700 w-[24px] h-[20px]" />
-     
-    </div>
-    </div>
+          >
+            <FiFilter className="text-gray-700 w-[24px] h-[20px]" />
+
+          </div>
+        </div>
 
         <h3 className="mt-6 text-gray-700 font-semibold text-[15px]">
           Upcoming Session
@@ -147,7 +149,7 @@ export default function DashboardPage() {
             >
               {completed ? "Completed" : "Mark as Completed"}
             </button>
-             <div className="flex flex-col">
+            <div className="flex flex-col">
               <span className="text-[13px] text-gray-600 leading-none">
                 Previous Session:
               </span>

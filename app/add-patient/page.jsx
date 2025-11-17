@@ -46,7 +46,7 @@ export default function AddPatientPage() {
     <div className="max-w-md mx-auto min-h-screen bg-gradient-to-b from-purple-50 to-pink-50 p-4 pt-6">
       <h2 className="text-xl font-semibold mb-4">Schedule Session</h2>
 
-  
+
       <label className="text-sm text-gray-600 mb-1 block">Select Patient</label>
       <select
         className="w-full bg-white p-3 rounded-xl shadow-sm mb-4 outline-none"
@@ -60,7 +60,7 @@ export default function AddPatientPage() {
         ))}
       </select>
 
-   
+
       <div className="bg-white rounded-xl p-3 flex items-center shadow-sm mb-4">
         <Image
           src={patient.image}
@@ -68,6 +68,8 @@ export default function AddPatientPage() {
           width={48}
           height={48}
           className="w-12 h-12 rounded-full object-cover"
+          loading="lazy"
+          sizes="48px"
         />
         <div className="ml-3">
           <p className="font-semibold">{patient.name}</p>
@@ -75,7 +77,7 @@ export default function AddPatientPage() {
         </div>
       </div>
 
-   
+
       <label className="text-sm text-gray-600 mb-1 block">Assign Practitioner</label>
       <select
         className="w-full bg-white p-3 rounded-xl shadow-sm mb-4 outline-none"
@@ -89,7 +91,7 @@ export default function AddPatientPage() {
         ))}
       </select>
 
-   
+
       <div className="bg-white rounded-xl p-3 flex items-center shadow-sm mb-4">
         <Image
           src={doctor.image}
@@ -104,7 +106,7 @@ export default function AddPatientPage() {
         </div>
       </div>
 
-   
+
       <label className="text-sm text-gray-600 mb-1 block">Session Type</label>
       <select
         className="w-full bg-white p-3 rounded-xl shadow-sm mb-4 outline-none"
@@ -116,7 +118,7 @@ export default function AddPatientPage() {
         <option>Consultation (30 min)</option>
       </select>
 
-      
+
       <label className="text-sm text-gray-600 mb-1 block">Session Mode</label>
       <div className="flex items-center gap-6 mb-4">
         <label className="flex items-center gap-2">
@@ -138,7 +140,7 @@ export default function AddPatientPage() {
         </label>
       </div>
 
-   
+
       <div className="grid grid-cols-2 gap-3 mb-4">
         <div>
           <label className="text-sm text-gray-600 mb-1 block">Session Date</label>
@@ -167,7 +169,7 @@ export default function AddPatientPage() {
         </div>
       </div>
 
-    
+
       {mode === "online" && (
         <div className="mb-4">
           <label className="text-sm text-gray-600 mb-1 block">Online Link</label>
@@ -181,7 +183,7 @@ export default function AddPatientPage() {
         </div>
       )}
 
-  
+
       <div className="mb-5">
         <label className="text-sm text-gray-600 mb-1 block">Session Details (Optional)</label>
         <textarea
@@ -192,7 +194,7 @@ export default function AddPatientPage() {
         />
       </div>
 
-  
+
       <div className="flex items-center justify-between gap-4">
         <button className="w-1/2 py-3 rounded-xl border border-gray-400 text-gray-700">
           Cancel

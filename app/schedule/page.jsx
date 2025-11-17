@@ -5,8 +5,8 @@ import Image from "next/image";
 import SessionTimeModal from "../../components/SessionTimeModal";
 
 export default function SchedulePage() {
-  const [selectedDoctor, setSelectedDoctor] = useState(DOCTORS[0].id);
-  const [selectedPatient, setSelectedPatient] = useState(PATIENTS[0].id);
+  const [selectedDoctor] = useState(DOCTORS[0].id);
+  const [selectedPatient] = useState(PATIENTS[0].id);
   const [sessionType, setSessionType] = useState("In-Person");
   const [date, setDate] = useState("2025-11-20");
   const [selectedSlot, setSelectedSlot] = useState(null);
@@ -20,14 +20,6 @@ export default function SchedulePage() {
     document.body.style.overflow = "auto";
   }
 }, [openModal]);
-
-  // const confirmBooking = () => {
-  //   if (!selectedSlot) return alert("Pick a slot!");
-  //   alert(
-  //     `Booked ${sessionType} with ${DOCTORS.find((d) => d.id === selectedDoctor).name
-  //     } on ${date} at ${selectedSlot}`
-  //   );
-  // };
 
   return (
     <div

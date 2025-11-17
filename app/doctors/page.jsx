@@ -83,13 +83,15 @@ export default function DoctorsPage() {
 
                 <div className="flex items-center justify-between p-3">
                   <div className="flex items-center gap-3">
-                    <Image
-                      src={doctor.image}
-                      alt={doctor.name}
-                      width={48}
-                      height={48}
-                      className="rounded-full object-cover"
-                    />
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                      <Image
+                        src="/doc_img.JPG"
+                        alt={doctor.name}
+                        width={48}
+                        height={48}
+                        className="rounded-full object-cover"
+                      />
+                    </div>
 
                     <div className="flex flex-col leading-tight">
                       <span className="font-semibold text-gray-900 text-[15px]">{doctor.name}</span>
